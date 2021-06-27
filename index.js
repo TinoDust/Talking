@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+require('dotenv').config();
 
 client.on("ready", () => {
     client.user.setActivity(`on ${client.guilds.cache.size} servers`);
@@ -8,6 +9,4 @@ client.on("ready", () => {
 
 
 
-
-token = 'ODU4NTA3NzUzMTU2NTA5NzA2.YNfJpg.MKCQ-ddsEHJ1NLQ4G34yhYuOL-s';
-client.login(token);
+client.login(process.env.DISCORD_TOKEN);
